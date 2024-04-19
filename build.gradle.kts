@@ -10,4 +10,10 @@ subprojects {
     }
 
 
+    tasks.withType<JavaCompile> {
+        targetCompatibility = "21"
+        sourceCompatibility = "21"
+    }
+
+
 }

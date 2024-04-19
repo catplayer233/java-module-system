@@ -6,4 +6,8 @@ public class TransitiveHighFunction {
         System.out.println("transitiveHighInvoke");
 
     }
+
+    private static void highPrivateScoreInvoke() {
+        System.out.println("highPrivateScoreInvoke");
+    }
 }

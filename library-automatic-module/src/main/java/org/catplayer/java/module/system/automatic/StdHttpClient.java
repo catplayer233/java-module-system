@@ -6,7 +6,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
 
 public class StdHttpClient {
 
@@ -20,12 +19,7 @@ public class StdHttpClient {
                 .GET()
                 .build();
 
-            var responsePageText = httpClient.send(httpRequest, responseInfo -> {
-                System.out.println("response status: " + responseInfo.statusCode());
-                System.out.println("response headers:");
-                System.out.println(responseInfo.headers());
-                return HttpResponse.BodySubscribers.ofString(StandardCharsets.UTF_8);
-            });
+            var responsePageText = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString()).body();
 
             System.out.println("response page: \n" + responsePageText);
         }

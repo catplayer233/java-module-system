@@ -5,4 +5,8 @@ public class TransitiveLowFunction {
     public static void transitiveLowInvoke() {
         System.out.println("transitiveLowInvoke");
     }
+
+    private static void privateScopeInvoke() {
+        System.out.println("transitiveLowPrivateInvoke");
+    }
 }
