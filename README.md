@@ -1,4 +1,4 @@
-# Inspect java module system since jdk 9
+# Inspect java module system
 Since jdk 9, java add module system, many developers like me do not understand it at first,
 so I write some examples with comments for giving you a hint what the java module system is exactly do.
 
